@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Install Updated packages on linux machine
+
 sudo yum update –y
 sudo wget -O /etc/yum.repos.d/jenkins.repo \
     https://pkg.jenkins.io/redhat-stable/jenkins.repo
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
 sudo yum upgrade
-#sudo yum install jenkins java-1.8.0-openjdk-devel -y
+
 sudo amazon-linux-extras install java-openjdk11
 sudo yum install git -y
 sudo wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
@@ -21,7 +21,7 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip
 sudo yum install unzip
 sudo unzip awscliv2.zip  
 sudo ./aws/install
-#ZAP is isntalled at /home/ec2-user/ZAP_2.11.1/zap.sh
+
 sudo wget https://github.com/zaproxy/zaproxy/releases/download/v2.11.1/ZAP_2_11_1_unix.sh
 sudo chmod +x ZAP_2_11_1_unix.sh 
 sudo ./ZAP_2_11_1_unix.sh -q
